@@ -1,0 +1,54 @@
+.hero {
+    display: none;
+}
+@media screen and (min-width: 1024px) {
+.hero {
+    padding: 10rem;
+    display: block;
+}
+.hero .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.hero .item {
+    width: 40%;
+}
+.hero .icon {
+    display: block;
+    width: 100%;
+}
+
+.hero .item:first-child, .hero .item:last-child {
+    animation: 3s linear 1s infinite slidein;
+}
+  
+@keyframes slidein {
+    0% {
+        -webkit-transform: translateY(-3rem);
+    }
+    30% {
+        -webkit-transform: translateY(3rem);
+    }
+    100%{
+        -webkit-transform: translateY(-3rem);
+    }
+
+}
+.hero .item:nth-child(2), .hero .item:nth-child(3) {
+    animation: 3s linear 1s infinite slideout;
+}
+  
+@keyframes slideout {
+    0% {
+        -webkit-transform: translateY(3rem);
+    }
+    30% {
+        -webkit-transform: translateY(-3rem);
+    }
+    100%{
+        -webkit-transform: translateY(3rem);
+    }
+
+}
+}
